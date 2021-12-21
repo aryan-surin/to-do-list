@@ -11,9 +11,10 @@
   padding-top: 100px;
 }
 
+/* ADDING FIELD */
 .container {
   padding: 40px;
-  width: 500px;
+  width: 800px;
   background-color: rgba(253, 0, 0, 0.924);
   border-radius: 20px 0 20px 0;
 }
@@ -21,6 +22,7 @@
 .task-box {
   background-color: lightsalmon;
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .heading {
@@ -31,7 +33,7 @@
 .sub-box {
   display: flex;
   justify-content: space-around;
-  gap: 2px;
+  gap: 5px;
   padding: 5px;
 }
 
@@ -50,4 +52,42 @@
   border: 0;
   border-radius: 50%;
   box-shadow: 2px 1px 2px 1px rgba(0, 0, 0, 0.555);
+}
+
+/* ADDED LIST */
+
+.list {
+  display: flex;
+  height: 45px;
+  background-color: rgba(231, 229, 229, 0.753);
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+.box {
+  font-size: 20px;
+  overflow: hidden;
+}
+
+.check-box {
+    width: 45px;
+  background: none;
+  border: none;
+}
+.task-name {
+  flex-grow: 2;
+  border-left: 1px solid rgba(0, 0, 0, 0.376);
+  border-right: 1px solid rgba(0, 0, 0, 0.376);
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.733);
+  padding-left: 10px;
+}
+.delete {
+  /* flex-grow: 0.2; */
+  width: 45px;
+  background: none;
+  border: none;
 }
