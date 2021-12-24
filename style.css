@@ -15,7 +15,7 @@
 .container {
   padding: 40px;
   width: 800px;
-  background-color: rgba(253, 0, 0, 0.924);
+  background-color: rgba(253, 8, 0, 0.787);
   border-radius: 20px 0 20px 0;
 }
 
@@ -44,6 +44,7 @@
   border: 0;
   border-radius: 20px;
   padding-left: 10px;
+
 }
 .add-button {
   width: 35px;
@@ -62,6 +63,8 @@
   background-color: rgba(231, 229, 229, 0.753);
   border-radius: 8px;
   margin-bottom: 5px;
+  transition: all 0.5s ease;
+overflow: hidden;
 }
 
 .box {
@@ -73,10 +76,15 @@
     width: 45px;
   background: none;
   border: none;
+  color: white;
+  background-color: rgba(0, 187, 0, 0.863);
+  font-size: 25px;
+  border-right: 1px solid rgba(0, 0, 0, 0.376);
+  transition: all 0.5s ease-in;
 }
 .task-name {
   flex-grow: 2;
-  border-left: 1px solid rgba(0, 0, 0, 0.376);
+  /* border-left: 1px solid rgba(0, 0, 0, 0.376); */
   border-right: 1px solid rgba(0, 0, 0, 0.376);
   display: flex;
   align-items: center;
@@ -84,10 +92,32 @@
   font-weight: 600;
   color: rgba(0, 0, 0, 0.733);
   padding-left: 10px;
+  transition: all 0.5s ease;
 }
 .delete {
   /* flex-grow: 0.2; */
   width: 45px;
+  font-size: 25px;
   background: none;
   border: none;
+  color: wheat;
+  background-color: rgb(246, 3, 3);
+
+}
+
+.complete{
+  text-decoration: line-through;
+  background-color: rgb(30, 255, 0);
+  opacity: 0.5;
+}
+
+.hidden{
+  color: rgba(0, 187, 0, 0.863);
+  background-color: white;
+
+}
+
+.fall{
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
 }
