@@ -5,9 +5,10 @@ const addBtn = document.querySelector(".add-button");
 
 const addList = document.querySelector(".list-box");
 
-////////Event Listeners//////
+///////Event Listeners//////
 document.addEventListener("DOMContentLoaded", getTodos);
 addBtn.addEventListener("click", addingTask);
+// task.addEventListener("submit", addingTask);
 addBtn.addEventListener("dblclick", removeTasks);
 addList.addEventListener("click", deleteCheck);
 
@@ -79,7 +80,6 @@ function deleteCheck(e) {
 }
 
 //////////working with local storage/////////
-
 //SETTING LOCALSTORAGE//
 function setLocalStorage(todo) {
   // Checking the history value
@@ -146,3 +146,9 @@ function removeTasks(todo) {
   todos.splice(todos.indexOf(todoIndex), 1);
   localStorage.setItem("todos", JSON.stringify(todos));
 }
+
+window.addEventListener("keydown", (e) => {
+  if (e.keyCode !== 13) return;
+  console.log(e.keyCode);
+  addingTask(e);
+});
